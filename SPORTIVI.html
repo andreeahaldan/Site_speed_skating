@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sportivi</TITLE>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./css/SPORTIVI.CSS">
+<link rel="icon" href="./imagini/logopag.png">
+
+</head>
+<body>
+<ul>
+ <div class="dropdown">
+ <li><a href="HOME.html">Home</a></li>
+  <li><a href="GENERALITATI.html">Generalitati</a></li>
+  <li><a href="SPORTIVI.html">Sportivi</a></li>
+  <li><a href="GALERIE FOTO.html">Galerie foto</a></li>
+  <li><a href="CONTACT.html">Contact</a></li>
+  <li><a href="BIBLIOGRAFIE.html">Bibliografie</a></li>
+ </div>
+</ul>
+
+<br>
+<br>
+<br>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="./imagini/sang-hwa-lee.jpg" alt="#" style="width:100%" height="399px" >
+      <h3>SANG-HWA LEE</h3>
+      <p><cite><big>Din Coreea.<br> 
+         29 de ani. <br>
+         2x campioana olimpica 500 m.<br>
+         1x medaliata cu argint olimpic 500 m.<br>
+         Detinatoarea recordului mondial 500 m. 
+         </big></cite></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="./imagini/ireen-wust.jpg" alt="#" style="width:100%" height="399px">
+      <h3>IREEN WUST</h3>
+      <p><cite><big>Din Olanda.<br>
+         32 de ani.<br>
+         5x campioana olimpica.<br>
+         5x medaliata cu argint olimpic.<br>
+         1x medaliata cu bronz olimpic.</p>
+      </big></cite></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="./imagini/claudia-pechstein.jpg" alt="#" style="width:100%" height="399px">
+      <h3>CLAUDIA PECHSTEIN</h3>
+      <p><cite><big>Din Germania.<br>
+         46 de ani.<br>
+         5x campioana olimpica.<br>
+         2x medaliata cu argint olimpic.<br>
+         2x medaliata cu bronz olimpic.
+      </big></cite></p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="content">
+      <img src="./imagini/sven-kramer.jpg" alt="#" style="width:100%" height="399px">
+      <h3>SVEN KRAMER</h3>
+      <p><cite><big>Din Olanda.<br>
+         32 de ani.<br>
+         3x campion olimpic consecutiv 5.000 m.<br>
+         2x medaliat cu argint olimpic.<br>
+         2x medaliat cu bronz olimpic.<br>
+         19x campion mondial.
+      </big></cite></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="./imagini/kjeld-nuis.jpg" alt="#" style="width:100%" height="399px">
+      <h3>KJELD NUIS</h3>
+      <p><cite><big>Din Olanda.<br>
+         26 de ani.<br>
+         1x campion olimpic 1.000 m.<br>
+         1x campion olimpic 1.500 m.
+      </big></cite></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="./imagini/ted-jan-bloemen.jpg" alt="#" style="width:100%"height="399px">
+      <h3>TED-JAN BLOEMEN</h3>
+      <p><cite><big>Din Canada.<br>
+          32 de ani.<br>
+         1x medaliat cu argint olimpic 5.000 m.<br>
+         1x campion olimpic 10.000 m.<br>
+         Detinatorul recordului mondial 5.000 m.<br>
+         Detinatorul recordului mondial 10.000 m.
+      </big></cite></p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+
+<script>
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("column");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+  
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+  
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+  
+  
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+  </script>
+</body>
+</html>

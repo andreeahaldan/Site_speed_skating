@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Galerie foto</TITLE>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./css/GALERIE-FOTO.CSS">
+<link rel="icon" href="./imagini/logopag.png">
+
+</head>
+<body>
+<ul>
+ <div class="dropdown">
+ <li><a href="HOME.html">Home</a></li>
+  <li><a href="GENERALITATI.html">Generalitati</a></li>
+  <li><a href="SPORTIVI.html">Sportivi</a></li>
+  <li><a href="GALERIE FOTO.html">Galerie foto</a></li>
+  <li><a href="CONTACT.html">Contact</a></li>
+  <li><a href="BIBLIOGRAFIE.html">Bibliografie</a></li>
+</div>
+</ul>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="slideshow-container">
+ 
+<div class="mySlides fade">
+  <div class="numbertext">1 / 13</div>
+  <img src="./imagini/pista.jpg" style="width:100%">
+  <div class="text">PISTA PATINAJ VITEZA</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 13</div>
+  <img src="./imagini/denis-yuskov.jpg" style="width:100%">
+  <div class="text">DENIS YUSKOV (RUSIA)</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 13</div>
+  <img src="./imagini/martina-sablikova.jpg" style="width:100%">
+  <div class="text">MARINA SABLIKOVA (CEHIA)</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 13</div>
+  <img src="./imagini/jun-ho-kim.jpg" style="width:100%">
+  <div class="text">JUN HO KIM (KOREA)</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 13</div>
+  <img src="./imagini/michelle-de-Jong.jpg" style="width:100%">
+  <div class="text">MICHELLE DE JONG (OLANDA)</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 13</div>
+  <img src="./imagini/thomas-krol.jpg" style="width:100%">
+  <div class="text">THOMAS KROL (OLANDA)</div>
+</div>
+ <div class="mySlides fade">
+  <div class="numbertext">7 / 13</div>
+  <img src="./imagini/ji-woo-park.jpg" style="width:100%">
+  <div class="text">JI WOO PARK (KOREA)</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">8 / 13</div>
+  <img src="./imagini/marten-liiv.jpg" style="width:100%">
+  <div class="text">MARTEN LIIV (ESTONIA)</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">9 / 13</div>
+  <img src="./imagini/team-italia.jpg" style="width:100%">
+  <div class="text">TEAM ITALIA</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">10 / 13</div>
+  <img src="./imagini/shani-davis.jpg" style="width:100%">
+  <div class="text">SHANI DAVIS (USA)</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">11 / 13</div>
+  <img src="./imagini/nao-kodaira.jpg" style="width:100%">
+  <div class="text">NAO KODAIRA (JAPONIA)</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">12 / 13</div>
+  <img src="./imagini/ronald-mulder.jpg" style="width:100%">
+  <div class="text">RONALD MULDER (OLANDA)</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">13 / 13</div>
+  <img src="./imagini/finish.jpg" style="width:100%">
+  <div class="text">FINISH</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+<!--<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+  <span class="dot" onclick="currentSlide(11)"></span>
+  <span class="dot" onclick="currentSlide(12)"></span>
+  <span class="dot" onclick="currentSlide(13)"></span>
+</div> -->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+
+</script>
+
+</body>
+</html>
