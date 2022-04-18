@@ -1,0 +1,116 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+ 
+
+li {
+    float: left;    
+}
+
+
+li a {
+    display:block;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    padding: 25px 30px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+
+li a:hover {
+    background-color: purple;
+}
+
+   
+* {
+    box-sizing: border-box;
+}
+
+
+h1{
+   color:red;
+}
+
+p{
+  font-size:23px;
+
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+   
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.content {
+    background-color:white;
+    padding: 10px; 
+}
+
+
+.row {  
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+}
+
+
+.side {
+    -ms-flex: 30%;
+    flex: 30%;
+    background-color: white;
+    padding: 20px;
+}
+
+
+.main {   
+    -ms-flex: 70%; 
+    flex: 70%;
+    background-color: #E0FFFF;
+    padding: 20px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 15px;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+@media screen and (max-width:600px) {
+  .column {
+     width: 100%;
+  } 
+
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+
+

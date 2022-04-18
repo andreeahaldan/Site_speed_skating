@@ -1,0 +1,50 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+li {
+    float: left;    
+}
+
+
+li a {
+    display:block;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    padding: 25px 30px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+
+li a:hover {
+    background-color: purple;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 0px solid #ddd;
+  color: white;
+}
+
+body {
+    background-image: url("./fundal3.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

@@ -1,0 +1,68 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+
+li {
+    float: left;    
+}
+
+
+li a {
+    display:block;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    padding: 25px 30px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+
+li a:hover {
+    background-color: purple;
+}
+
+body {
+    background-image: url("./fundal1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+ body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      }
+ p {
+      position: relative;
+      font-family: Impact, sans-serif;
+      font-size: 200px;
+      letter-spacing: 2px;
+      background: linear-gradient(#F0F8FF,#F0FFFF, #fff, #000);
+      background-repeat: no-repeat;
+      background-size: 80%;
+      animation: animate 6s infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: rgba(255, 255, 255, 0);
+      }
+      @keyframes animate {
+      0% {
+      background-position: -500%;
+      }
+      100% {
+      background-position: 500%;
+      }
+      }
